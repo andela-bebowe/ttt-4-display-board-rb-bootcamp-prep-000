@@ -7,6 +7,7 @@ def box
 end
 
 def display_board(board)
+  str = ""
   board.each_with_index do |val, index|
     is_third_value = (index + 1) % 3 == 0
     if (is_third_value)
