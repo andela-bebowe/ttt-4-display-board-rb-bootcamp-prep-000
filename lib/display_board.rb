@@ -11,7 +11,7 @@ def display_board(board)
   board.each_with_index do |val, index|
     is_third_row = (index + 1) % 3 == 0
     is_last_value = (index + 1) == board.length
-    if (is_third_row & !is_ninth_value)
+    if (is_third_row & !is_last_value)
       str += " #{val} \n#{divider}"
     elsif is_last_value
       str += " #{val} "
