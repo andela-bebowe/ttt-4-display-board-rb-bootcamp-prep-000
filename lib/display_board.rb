@@ -1,9 +1,5 @@
-def divider
-  "-----------\n"
-end
-
-def box
-  "   |   |   \n"
+def horizontal_divider
+  "\n-----------\n"
 end
 
 def display_board(board)
@@ -12,7 +8,7 @@ def display_board(board)
     is_third_row = (index + 1) % 3 == 0
     is_last_value = (index + 1) == board.length
     if (is_third_row & !is_last_value)
-      str += " #{val} \n#{divider}"
+      str += " #{val} #{horizontal_divider}"
     elsif is_last_value
       str += " #{val} "
     else
@@ -21,5 +17,6 @@ def display_board(board)
   end
   puts str
 end
+
 board = ["X", " ", " ", " ", "X", " ", " ", " ", "X"]
 display_board(board)
