@@ -8,7 +8,7 @@ end
 
 def display_board(board)
   board.each_with_index do |val, index|
-    puts val
+    puts index
     if ((index + 1) % 3 == 0 )
       str += " #{val} \n\n#{divider}"
     else
